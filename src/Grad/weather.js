@@ -1,22 +1,54 @@
-const WEATHER = "weather";
+const GEO = "geo";
+
+const API_KEY = "752a3dace70582b74967222a95fc1483";
+
+function getWeather(lat, lon) {
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&lang=kr&units=metric`;
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            const temp = json.main.temp;
+            const feels_temp = json.main.feels_like;
+            const minTemp = json.main.temp_min;
+            const maxTemp = json.main.temp_max;
+            console.log(temp, feels_temp, minTemp, maxTemp);
+        });
+}
+
+function saveGeo(detailObj) {
+    localStorage.setItem(GEO, JSON.stringify(detailObj));
+}
 
 function getGeoSuccess(position) {
-    console.log(positioin);
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const detaioObj = {
+        latitude,
+        longitude,
+    };
+    saveGeo(detaioObj);
+    getWeather(latitude, longitude);
 }
 
 function getGeoError() {
     console.log("can't access");
 }
 
-function askWeather() {
+function askGeo() {
     navigator.geolocation.getCurrentPosition(getGeoSuccess, getGeoError);
 }
 
 function loadWeather() {
-    const loadedWeather = localStorage.getItem(WEATHER);
-    if (loadedWeather !== null) {
-        askWeather();
+    const loadedGeo = localStorage.getItem(GEO);
+    if (loadedGeo === null) {
+        askGeo();
     } else {
+        const parseGEO = JSON.parse(loadedGeo);
+        const temp = getWeather(parseGEO.latitude, parseGEO.longitude);
+
+        console.log(temp);
     }
 }
 
