@@ -106,3 +106,6 @@ fabric.properties
 .idea/codestream.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/webstorm
+.idea/modules.xml
+.idea/yjh96.github.io.iml
+.idea/vcs.xml
