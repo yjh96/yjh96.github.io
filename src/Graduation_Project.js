@@ -1,4 +1,5 @@
 import { clock } from "./Grad/clock.js";
+import { background } from "./Grad/background.js";
 
 const nameForm = document.getElementById("nameInput"),
     nameElement = document.getElementById("JS-name"),
