@@ -1,5 +1,6 @@
 import { clock } from "./Grad/clock.js";
 import { background } from "./Grad/background.js";
+import { loadWeather } from "./Grad/weather.js";
 
 const nameForm = document.getElementById("nameInput"),
     nameElement = document.getElementById("JS-name"),
@@ -46,6 +47,7 @@ function weather() {}
 function init() {
     clock();
     background();
+    loadWeather();
     setInterval(clock, 1000);
 }
 
