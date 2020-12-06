@@ -1,9 +1,10 @@
 const GEO = "geo";
 
-const tempBox = document.getElementById("JS-temp");
-const maxBox = document.getElementById("JS-maxT");
-const minBox = document.getElementById("JS-minT");
-const feelBox = document.getElementById("JS-feel");
+// const tempBox = document.getElementById("JS-temp");
+// const maxBox = document.getElementById("JS-maxT");
+// const minBox = document.getElementById("JS-minT");
+// const feelBox = document.getElementById("JS-feel");
+const weatherBox = document.getElementById("weather");
 
 const API_KEY = "752a3dace70582b74967222a95fc1483";
 
@@ -18,10 +19,11 @@ function getWeather(lat, lon) {
             const feels_temp = json.main.feels_like;
             const minTemp = json.main.temp_min;
             const maxTemp = json.main.temp_max;
-            tempBox.innerText = `${temp}`;
-            maxBox.innerText = `${maxTemp}`;
-            minBox.innerText = `${minTemp}`;
-            feelBox.innerText = `${feels_temp}`;
+            // tempBox.innerText = `${temp}`;
+            // maxBox.innerText = `${maxTemp}`;
+            // minBox.innerText = `${minTemp}`;
+            // feelBox.innerText = `${feels_temp}`;
+            weatherBox.innerText = `현재온도 : ${temp}도 | 체감온도 : ${feels_temp}도 \n\n 최저 온도 : ${minTemp}도 | 최고 온도 : ${maxTemp}도`;
         });
 }
 

@@ -1,16 +1,17 @@
 import { clock } from "./Grad/clock.js";
 import { background } from "./Grad/background.js";
 import { loadWeather } from "./Grad/weather.js";
+import { loadName } from "./Grad/name.js";
 
-const nameForm = document.getElementById("nameInput"),
-    nameElement = document.getElementById("JS-name"),
-    nameInputElement = document.getElementById("JS-nameInput");
+//const nameForm = document.getElementById("nameInput"),
+// (nameElement = document.getElementById("JS-name")),
+//     (nameInputElement = document.getElementById("JS-nameInput"));
 
-const NAMELS = "NAME";
-const toDoLS = "toDo";
+// const NAMELS = "NAME";
+// const toDoLS = "toDo";
 
-let toDoDB = [];
-let nameDB = [];
+// let toDoDB = [];
+// let nameDB = [];
 
 function inputHandler(event) {
     event.preventDefault();
@@ -31,7 +32,7 @@ function inputHandler(event) {
 
 function todoList() {}
 
-nameForm.addEventListener("submit", inputHandler);
+//nameForm.addEventListener("submit", inputHandler);
 
 function saveName(input) {}
 
@@ -48,6 +49,7 @@ function init() {
     clock();
     background();
     loadWeather();
+    loadName();
     setInterval(clock, 1000);
 }
 

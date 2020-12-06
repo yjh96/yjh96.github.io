@@ -9,26 +9,43 @@
         />
     </head>
 
-    <body>
-        <div class="clockBox border-0 border">
-            <span
-                class="clock text-blue text-emphasized h1"
-                id="JS-clock"
-            ></span>
+    <body
+        class="text-center"
+        style="background-color: hsla(210, 0.12, 0.16, 0.85)"
+    >
+        <div class="clockBox border-0 border text-blue text-emphasized h1">
+            <div class="clock" id="JS-clock"></div>
         </div>
-        <div class="nameBox border-0 border">
+        <div class="nameBox border-0 border text-blue text-emphasized h2">
             <form id="nameInput">
                 <input
+                    style="vertical-align: text-top"
+                    class="h4 input-dark"
                     type="text"
                     id="JS-nameInput"
                     placeholder="Name Here!"
                     value=""
                 />
-                <span id="JS-name"></span>
+                <div id="JS-name"></div>
             </form>
         </div>
-        <div class="todoBox"></div>
-        <div class="weatherBox border-0 border"></div>  
+        <div class="todoBox border border-0">
+            <form>
+                <input
+                    class="todoInput input-dark"
+                    type="text"
+                    value=""
+                    placeholder="What to do?"
+                />
+            </form>
+            <ul class="todoList">
+                <div class="Subhead-heading">sdfasds</div>
+            </ul>
+        </div>
+
+        <div class="weatherBox border-0 border text-blue text-emphasized h2">
+            <div id="weather"></div>
+        </div>
         <script type="module" src="../src/Graduation_Project.js"></script>
     </body>
 </html>
