@@ -54,9 +54,7 @@ function loadWeather() {
         askGeo();
     } else {
         const parseGEO = JSON.parse(loadedGeo);
-        const temp = getWeather(parseGEO.latitude, parseGEO.longitude);
-
-        console.log(temp);
+        getWeather(parseGEO.latitude, parseGEO.longitude);
     }
 }
 
