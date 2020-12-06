@@ -1,4 +1,3 @@
-
 const body = document.querySelector("body");
 
 function background() {
@@ -13,4 +12,4 @@ function background() {
     });
 }
 
-export = { background };
+export { background };
