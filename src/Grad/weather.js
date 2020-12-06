@@ -1,5 +1,10 @@
 const GEO = "geo";
 
+const tempBox = document.getElementById("JS-temp");
+const maxBox = document.getElementById("JS-maxT");
+const minBox = document.getElementById("JS-minT");
+const feelBox = document.getElementById("JS-feel");
+
 const API_KEY = "752a3dace70582b74967222a95fc1483";
 
 function getWeather(lat, lon) {
@@ -13,7 +18,10 @@ function getWeather(lat, lon) {
             const feels_temp = json.main.feels_like;
             const minTemp = json.main.temp_min;
             const maxTemp = json.main.temp_max;
-            console.log(temp, feels_temp, minTemp, maxTemp);
+            tempBox.innerText = `${temp}`;
+            maxBox.innerText = `${maxTemp}`;
+            minBox.innerText = `${minTemp}`;
+            feelBox.innerText = `${feels_temp}`;
         });
 }
 
