@@ -89,3 +89,7 @@
     border-style: none;
     border-radius: 20px;
 }
+
+.text-left {
+    text-align: left;
+}
