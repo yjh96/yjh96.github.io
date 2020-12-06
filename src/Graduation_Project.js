@@ -45,7 +45,7 @@ function weather() {}
 
 function init() {
     clock();
-    //background();
+    background();
     setInterval(clock, 1000);
 }
 
