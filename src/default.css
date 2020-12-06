@@ -6,6 +6,22 @@
     height: 100%;
 }
 
+.nameBox {
+    position: fixed;
+    left: 45%;
+    top: 45%;
+    padding: 30px 30px 30px 30px;
+    background-color: hsla(210, 12%, 16%, 85%);
+}
+
+.weatherBox {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 30px 30px 30px 30px;
+    background-color: hsla(210, 12%, 16%, 85%);
+}
+
 .clockBox {
     position: fixed;
     left: 20px;
@@ -39,4 +55,9 @@
     width: 100%;
     z-index: -1;
     animation: fadeIn 1s linear;
+}
+
+.border {
+    border-style: none;
+    border-radius: 20px;
 }
